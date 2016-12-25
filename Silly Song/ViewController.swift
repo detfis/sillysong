@@ -45,7 +45,7 @@ extension ViewController: UITextFieldDelegate {
 
 func shortNameFromName(name: String) -> String {
     let vowelSet = CharacterSet(charactersIn: "aeiou")
-    let lowercaseName = name.lowercased().folding(locale: .current)
+    let lowercaseName = name.lowercased()
     let normalizedName = lowercaseName.folding(options: .diacriticInsensitive, locale: .current)
     let firstVowelIndex = normalizedName.rangeOfCharacter(from: vowelSet)?.lowerBound
     if firstVowelIndex == nil {
